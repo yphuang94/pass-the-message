@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pass The Message</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="body-container">
+        <div id="message-container">
+            <h3 style="text-align: center;">Pass the Message</h3>
+            <p style="border-bottom: 2px solid lightgray;"></p>
+            <input type="text" id="input-container" style="margin-bottom: 10px;">
+            <button id="submit-btn" style="width: 100px;" onclick="messageOutput()">Submit</button>
+        </div>
+        <div id="display-container"></div>
+    </div>    
+
+    <script>
+        function messageOutput() {
+            let storedMessage = document.getElementById("input-container").value;
+            document.getElementById("display-container").innerHTML = storedMessage;
+            
+            document.getElementById("input-container").value = "";
+        }
+
+        document.getElementById("input-container").addEventListener("keydown", function(event) {
+            if (event.keyCode == "13") {
+                messageOutput();
+            }
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+#body-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+#message-container {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+#display-container {
+    font-size: 36px;
+}
+
